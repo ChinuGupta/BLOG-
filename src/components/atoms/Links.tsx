@@ -1,10 +1,12 @@
+import { Link } from "react-router"
 type TextProps = {
     title: string
     className?:string
+    to:string
 }
 
-export default function Links({title}:TextProps) {
+export default function Links({title,to}:TextProps) {
     return (
-        <span>{title}</span>
+        <Link to={to}>{title}</Link>
     )
 }

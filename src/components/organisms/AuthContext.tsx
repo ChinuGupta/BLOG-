@@ -1,30 +1,74 @@
 import { createContext, ReactNode, useContext, useState } from "react";
-type proptype={
-    isLoggedIn:boolean;
-    login:(email:string,password:string)=>void;
-    logout:()=>void;
+import { useNavigate } from "react-router";
+
+type proptype = {
+    isLoggedIn: boolean;
+    login: (email: string) => void;
+    register: (email: string, password: string) => void;
+    logout: () => void;
 }
-const AuthContext=createContext<proptype|null>(null);
-export default function AuthProvider({children}:{children:ReactNode}) {
-    const [isLoggedIn,setIsloggedIn]=useState<boolean>(false);
-    const login = (email:string,password:string)=>{
-        sessionStorage.setItem("email",email)
-        sessionStorage.setItem("password",password)
+
+const AuthContext = createContext<proptype | null>(null);
+export default function AuthProvider({ children }: { children: ReactNode }) {
+    const navigate = useNavigate()
+
+    const [isLoggedIn, setIsloggedIn] = useState(!!localStorage.getItem("email"));
+
+
+    const login = (email: string) => {
+
+        const users = JSON.parse(localStorage.getItem("users") || "[]");
+
+        const user = users.find((user: { email: string }) =>
+            user.email === email
+        );
+
+        if (user) {
+            setIsloggedIn(true);
+            navigate('/');
+        } else {
+            alert("Invalid email or password");
+        }
+
+
+    }
+    const register = (email: string, password: string) => {
+
+        const users = JSON.parse(localStorage.getItem("users") || "[]");
+
+        const userExists = users.some((user: { email: string }) => user.email === email);
+
+        if (userExists) {
+            alert("User already exists");
+            return;
+        }
+
+        users.push({ email, password });
+
+        localStorage.setItem("users", JSON.stringify(users));
+
         setIsloggedIn(true);
+        navigate('/');
     }
-    const logout=()=>{
-        sessionStorage.clear();
+
+    const logout = () => {
+        localStorage.removeItem("email");
+        localStorage.removeItem("password");
         setIsloggedIn(false);
+        navigate('/');
     }
-  return (
-    <AuthContext.Provider value={{isLoggedIn,login,logout}}>{children}</AuthContext.Provider>
-  )
+
+    return (
+        <AuthContext.Provider value={{ isLoggedIn, login, register, logout }}>{children}</AuthContext.Provider>
+    )
 }
-export const useAuth=()=>{
-    const context=useContext(AuthContext)
-    if(context)
-    {
-        return useContext(AuthContext);
+
+// eslint-disable-next-line react-refresh/only-export-components
+export const useAuth = () => {
+    const context = useContext(AuthContext)
+    if (!context) {
+        throw new Error("Context invalid");
     }
-    throw new Error("Context invalid");
+    return context;
 }
+

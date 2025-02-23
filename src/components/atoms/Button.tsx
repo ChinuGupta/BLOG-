@@ -1,10 +1,17 @@
+import { forwardRef } from "react";
+
 type Buttonprops={
 text:string,
-className?:string
+className?:string,
+onClick?:()=>void
 }
 
-export default function Button({text,className}:Buttonprops) {
+const Button = forwardRef<HTMLButtonElement,Buttonprops>(({ text, className, onClick }, ref) => {
   return (
-    <button type="submit" className={className}>{text}</button>
-  )
-}
+    <button ref={ref} type="button" className={className} onClick={onClick}>
+      {text}
+    </button>
+  );
+});
+
+export default Button;
