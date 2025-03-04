@@ -1,12 +1,24 @@
 import Links from "../atoms/Links";
+import { useAuth } from "../../context/AuthContext";
 
 export default function Headermolecules() {
+    const { isLoggedIn } = useAuth();
     return (
+
         <div className="flex items-center gap-10 p-4 ">
-            {/* <Links title="Home"  to="/home"/> */}
-            <Links title="Blogs"  to="/Blog"/>
-            <Links title="User"  to="/UserListPage"/>
-            <Links title="About" to="/about" />
+            {
+                isLoggedIn ? (
+
+                    <>
+                        <Links title="User" to="/UserListPage" />
+                        <Links title="Blogs" to="/Blog" />
+                        <Links title="About" to="/about" />
+                    </>
+                    
+                ) :
+                    ""
+            }
+
         </div>
     );
 }

@@ -1,36 +1,50 @@
-import { useEffect, useState } from "react";
 import CardComponent from "../CardComponent";
-import axios from "axios";
+import { blogs } from "../../types/types"
+import BlogForm from "./BlogForm";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "../../redux/store";
+import { fetchBlogs } from "../../Actions/actions";
+import Loading from "../Loading";
 
-// type apiProps={
-//   id: number;
-//   title: string;
-//   body: string;
-// }
 export default function BlogPage() {
-  const [Blog, setBlog] = useState([]);
+  const [showForm, setShowForm] = useState(false);
+  const dispatch = useDispatch<AppDispatch>()
+  const { blog: bloglist, isloading, iserror } = useSelector((state: RootState) => state.fetchBlog);
+
   useEffect(() => {
-    axios.get("https://jsonplaceholder.typicode.com/posts").then((response) => {
-      console.log(response.data)
-      setBlog(response.data.slice(0,10))
-    }).catch((error) => {
-      console.log(error)
-    })
-  }, []);
+    dispatch(fetchBlogs())
+  }, [dispatch])
+
+  const fetchbloglist = () => dispatch(fetchBlogs());
+
+  if (isloading) return <h1 className="text-2xl font-bold text-center"><Loading/></h1>;
+  if (iserror) return <h1 className="text-2xl text-red-600 font-bold text-center">{iserror}</h1>;
 
   return (
     <div>
-      <h1 className="text-2xl font-bold text-center mb-6">Blogs</h1>
+
+      <h1 className="text-2xl font-bold text-center mb-6">My Blogs</h1>
+      <div className="flex justify-center item-center mb-10">
+        <button
+          className=" bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer"
+          onClick={() => setShowForm(true)}
+        >
+          Add Blog
+        </button>
+        {showForm && <BlogForm fetchbloglist={fetchbloglist} closeForm={() => setShowForm(false)} bloglist={bloglist} />}
+      </div>
+
+
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5 px-4">
-      {
-        Blog.length > 0 ?
-          (Blog.map((blogs, index) => <CardComponent key={index} blogs={blogs} />)) : (
-            <p>Loading....</p>
-          )
-      }
-</div>
 
+        {bloglist.length > 0 ? (
+          bloglist.map((blog: blogs) => <CardComponent key={blog.id} blogs={blog} />)
+        ) : (
+          <p className="text-center text-gray-500">No Blogs Found</p>
+        )}
+      </div>
     </div>
-  )
-
+  );
 }

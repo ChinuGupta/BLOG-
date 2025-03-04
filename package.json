@@ -7,19 +7,30 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "frontend": "npm run dev",
+    "backend": "json-server --watch ./src/Database/db.json --port 5000",
+    "both": "concurrently \"npm run frontend\" \"npm run backend\""
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.6.0",
     "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "json-server": "^1.0.0-beta.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.2.0"
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.2.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^3.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
+    "@types/redux-logger": "^3.0.13",
     "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
     "eslint": "^9.19.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.18",

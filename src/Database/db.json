@@ -1,0 +1,366 @@
+{
+  "users": [
+    {
+      "id": "2",
+      "email": "jane.doe@example.com",
+      "password": "Chinu123",
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "username": "janedoe",
+      "age": 28,
+      "gender": "Female",
+      "bio": "Passionate writer and traveler. My blog covers everything from travel tips to personal experiences.",
+      "profilePicture": "https://i.pravatar.cc/1000/u=433847",
+      "socialLinks": {
+        "twitter": "https://twitter.com/janedoe",
+        "facebook": "https://facebook.com/janedoe",
+        "instagram": "https://instagram.com/janedoe"
+      },
+      "totalPosts": 15,
+      "followers": 1200,
+      "following": 250,
+      "subscriptionPlan": "Basics",
+      "lastLogin": "2025-02-21T09:15:00Z"
+    },
+    {
+      "id": "3",
+      "email": "joe.doe@example.com",
+      "password": "Chinu123",
+      "firstName": "Joe",
+      "lastName": "Doe",
+      "username": "joe",
+      "age": 25,
+      "gender": "Male",
+      "bio": "A budding writer with a love for storytelling. I write articles about gaming and pop culture.",
+      "profilePicture": "https://i.pravatar.cc/1000/u=433849",
+      "socialLinks": {
+        "twitter": "https://twitter.com/jatindoe",
+        "facebook": "https://facebook.com/jatindoe",
+        "instagram": "https://instagram.com/jatindoe"
+      },
+      "totalPosts": 5,
+      "followers": 500,
+      "following": 120,
+      "subscriptionPlan": "Standard",
+      "lastLogin": "2025-02-22T16:47:00Z"
+    },
+    {
+      "id": "4",
+      "email": "alice.smith@example.com",
+      "password": "Chinu123",
+      "firstName": "Alice",
+      "lastName": "Smith",
+      "username": "alicesmith",
+      "age": 32,
+      "gender": "Female",
+      "bio": "Food and lifestyle blogger. Sharing recipes, cooking tips, and my adventures in the kitchen.",
+      "profilePicture": "https://i.pravatar.cc/1000/u=433840",
+      "socialLinks": {
+        "twitter": "https://twitter.com/alicesmith",
+        "facebook": "https://facebook.com/alicesmith",
+        "instagram": "https://instagram.com/alicesmith"
+      },
+      "totalPosts": 50,
+      "followers": 2200,
+      "following": 400,
+      "subscriptionPlan": "Premium",
+      "lastLogin": "2025-02-19T12:10:00Z"
+    },
+    {
+      "id": "5",
+      "email": "bob.jones@example.com",
+      "password": "Chinu123",
+      "firstName": "Bob",
+      "lastName": "Jones",
+      "username": "bobjones",
+      "age": 45,
+      "gender": "Male",
+      "bio": "Veteran blogger who writes about politics, current events, and social issues.",
+      "profilePicture": "https://i.pravatar.cc/1000/u=433867",
+      "socialLinks": {
+        "twitter": "https://twitter.com/bobjones",
+        "facebook": "https://facebook.com/bobjones",
+        "instagram": "https://instagram.com/bobjones"
+      },
+      "totalPosts": 150,
+      "followers": 5000,
+      "following": 300,
+      "subscriptionPlan": "Basic",
+      "lastLogin": "2025-02-18T08:05:00Z"
+    },
+    {
+      "id": "6",
+      "email": "Milliebobyb.brown@example.com",
+      "password": "Chinu123",
+      "firstName": "Millie boby",
+      "lastName": "Brown",
+      "username": "Milliebrown",
+      "age": "21",
+      "gender": "Female",
+      "bio": "Lifestyle and health blogger. Focused on fitness, well-being, and mindful living.",
+      "profilePicture": "https://i.pravatar.cc/1000/u=433845",
+      "socialLinks": {
+        "twitter": "https://twitter.com/emilybrown",
+        "facebook": "https://facebook.com/emilybrown",
+        "instagram": "https://instagram.com/emilybrown"
+      },
+      "totalPosts": 30,
+      "followers": 1800,
+      "following": 250,
+      "subscriptionPlan": "Standard",
+      "lastLogin": "2025-02-20T17:30:00Z"
+    },
+    {
+      "id": "7",
+      "email": "david.pink@example.com",
+      "password": "Chinu123",
+      "firstName": "David",
+      "lastName": "pink",
+      "username": "davidpink",
+      "age": 35,
+      "gender": "Male",
+      "bio": "Sports enthusiast and commentator. I write about various sports including basketball and soccer.",
+      "profilePicture": "https://i.pravatar.cc/1000/u=433842",
+      "socialLinks": {
+        "twitter": "https://twitter.com/davidgreen",
+        "facebook": "https://facebook.com/davidgreen",
+        "instagram": "https://instagram.com/davidgreen"
+      },
+      "totalPosts": 80,
+      "followers": 3000,
+      "following": 450,
+      "subscriptionPlan": "Premium",
+      "lastLogin": "2025-02-22T10:25:00Z"
+    },
+    {
+      "id": "8",
+      "email": "lisa.white@example.com",
+      "password": "Chinu123",
+      "firstName": "Lisa",
+      "lastName": "White",
+      "username": "lisawhite",
+      "age": 29,
+      "gender": "Female",
+      "bio": "Fashion and beauty blogger. Follow me for daily fashion tips, makeup tutorials, and more!",
+      "profilePicture": "https://i.pravatar.cc/1000/u=433850",
+      "socialLinks": {
+        "twitter": "https://twitter.com/lisawhite",
+        "facebook": "https://facebook.com/lisawhite",
+        "instagram": "https://instagram.com/lisawhite"
+      },
+      "totalPosts": 60,
+      "followers": 2500,
+      "following": 320,
+      "subscriptionPlan": "Basic",
+      "lastLogin": "2025-02-23T11:00:00Z"
+    },
+    {
+      "id": "8e559aca-c527-4996-bfcb-d5362b71dbba",
+      "email": "Chinu123@gmail.com",
+      "password": "Chinu123",
+      "firstName": "Chinu123",
+      "lastName": "",
+      "username": "Chinu123",
+      "age": 18,
+      "gender": "Not specified",
+      "bio": "Hello! I'm new here.",
+      "profilePicture": "https://via.placeholder.com/150",
+      "socialLinks": {
+        "twitter": "",
+        "facebook": "",
+        "instagram": ""
+      },
+      "totalPosts": 0,
+      "followers": 0,
+      "following": 0,
+      "subscriptionPlan": "Free",
+      "lastLogin": "2025-03-01T09:31:47.064Z"
+    },
+    {
+      "id": "cf39c00b-19c5-4a11-83fc-9d31b480ef2f",
+      "email": "Chinu@gmail.com",
+      "password": "Chinu123",
+      "firstName": "Chinu",
+      "lastName": "Gupta",
+      "username": "Chinu",
+      "age": "21",
+      "gender": "Not specified",
+      "bio": "Hello! I'm new here.",
+      "profilePicture": "https://via.placeholder.com/150",
+      "socialLinks": {
+        "twitter": "",
+        "facebook": "",
+        "instagram": ""
+      },
+      "totalPosts": 0,
+      "followers": 0,
+      "following": 0,
+      "subscriptionPlan": "Free",
+      "lastLogin": "2025-03-01T12:36:15.113Z"
+    },
+    {
+      "id": "3a32dc5f-dabf-45ea-825a-a82bf5cff430",
+      "email": "NoahS@gmail.com",
+      "password": "Chinu123",
+      "firstName": "Noah",
+      "lastName": "scchanap",
+      "username": "Noah",
+      "age": 18,
+      "gender": "Not specified",
+      "bio": "Hello! I'm new here.",
+      "profilePicture": "https://via.placeholder.com/150",
+      "socialLinks": {
+        "twitter": "",
+        "facebook": "",
+        "instagram": ""
+      },
+      "totalPosts": 0,
+      "followers": 0,
+      "following": 0,
+      "subscriptionPlan": "Free",
+      "lastLogin": "2025-03-01T18:34:33.808Z"
+    },
+    {
+      "id": "5fdc658a-f31b-4d89-9feb-bbaec9e41031",
+      "email": "Chinu123@gmail.com",
+      "password": "Chinu123",
+      "firstName": "Chinu123",
+      "lastName": "",
+      "username": "Chinu123",
+      "age": 18,
+      "gender": "Not specified",
+      "bio": "Hello! I'm new here.",
+      "profilePicture": "https://via.placeholder.com/150",
+      "socialLinks": {
+        "twitter": "",
+        "facebook": "",
+        "instagram": ""
+      },
+      "totalPosts": 0,
+      "followers": 0,
+      "following": 0,
+      "subscriptionPlan": "Free",
+      "lastLogin": "2025-03-03T10:11:51.255Z"
+    }
+  ],
+  "blogs": [
+    {
+      "id": "1",
+      "userId": 1,
+      "title": "The Future of Artificial Intelligence",
+      "author": "John Doe",
+      "datePublished": "2025-02-20T10:30:00Z",
+      "category": "Technology",
+      "content": "Artificial Intelligence (AI) has evolved far beyond its humble beginnings, and we’re now standing at the precipice of a technological revolution that promises to impact every aspect of our lives. AI is no longer a futuristic concept; it’s part of our daily routine, helping us with everything from search engines to voice assistants. But what does the future hold for AI, and how will it continue to evolve?\n\nOne of the most exciting areas of AI development is in machine learning, particularly deep learning. These are systems designed to automatically improve their performance through exposure to data, meaning they learn from experience in ways that mimic human intelligence. This has opened up a whole new world of possibilities. For example, machine learning algorithms are already being used in predictive analytics, medical diagnostics, fraud detection, and autonomous driving. The use of AI to make predictions about consumer behavior, detect patterns in healthcare data, or even predict weather events is becoming more and more refined.\n\nThe potential applications of AI are vast and wide-reaching. One of the most talked-about is the development of autonomous vehicles. Self-driving cars, trucks, and drones are becoming a reality, thanks to advancements in AI, and they promise to revolutionize transportation and logistics. Autonomous vehicles could reduce traffic accidents, ease congestion, and improve delivery efficiency. However, the ethical and safety concerns surrounding AI-powered transport still need to be addressed, as well as the question of how these vehicles will interact with human drivers on the road.\n\nBeyond transportation, AI is also making a significant impact in fields like healthcare. AI-powered diagnostic tools are being used to analyze medical images, helping doctors detect conditions such as cancer or heart disease earlier and more accurately than ever before. AI is also being used to develop personalized treatment plans for patients, taking into account their unique genetic makeup, lifestyle, and other factors. This can lead to better health outcomes and a more efficient healthcare system overall.\n\nHowever, with these advances come challenges. As AI becomes more powerful and capable, concerns about its impact on the workforce are growing. Automation powered by AI could potentially replace jobs in many industries, especially those that involve repetitive or routine tasks. For example, factory workers, drivers, and even white-collar workers in fields like customer service and data entry may face job displacement as AI systems take over these tasks.\n\nMoreover, there are questions surrounding the ethics of AI. For instance, AI systems can sometimes exhibit biases, especially when they are trained on biased data. This could lead to discrimination in hiring, loan approvals, and other important decision-making processes. There are also concerns about privacy and data security, as AI systems often rely on vast amounts of personal data to function. How can we ensure that AI is used responsibly and that our privacy is protected? What safeguards can be put in place to prevent AI from being used for malicious purposes?\n\nAnother significant challenge that must be addressed is the potential for AI to be used in harmful ways. There is growing concern about AI’s role in warfare, with the development of autonomous weapons systems that can operate without human intervention. These systems could theoretically make life-or-death decisions on the battlefield, raising important ethical and moral questions about the role of machines in warfare.\n\nDespite these challenges, the future of AI is bright. Researchers, policymakers, and industry leaders are working together to ensure that AI is developed and deployed in a way that benefits society as a whole. Efforts are being made to improve AI ethics, reduce bias, and ensure that the technology is used responsibly. Moreover, the potential benefits of AI are immense. From improved healthcare outcomes to more efficient transportation systems, AI has the potential to make our world safer, smarter, and more connected.\n\nAs we move forward, one thing is clear: the future of AI will be transformative. We are just scratching the surface of what this technology can achieve, and it will continue to evolve in ways that we can’t even imagine. But to ensure that the benefits of AI are maximized while minimizing the risks, it’s essential that we proceed with caution and keep a close eye on how AI is shaping our world. By doing so, we can ensure that AI becomes a tool for good, helping to create a better future for all of us.",
+      "tags": [
+        "AI",
+        "Technology",
+        "Innovation",
+        "Machine Learning",
+        "Automation",
+        "Future Tech"
+      ],
+      "comments": [
+        {
+          "username": "techgeek123",
+          "comment": "AI is the future! Excited to see where it goes. The possibilities are endless.",
+          "date": "2025-02-20T12:15:00Z"
+        },
+        {
+          "username": "gadgetlover45",
+          "comment": "I love reading about the latest AI innovations! Keep it up, John! This is definitely going to change everything.",
+          "date": "2025-02-20T14:05:00Z"
+        },
+        {
+          "username": "futurevision",
+          "comment": "This post opened my eyes to the implications of AI in the workforce. We need to start thinking about how to upskill workers for the AI era.",
+          "date": "2025-02-20T15:00:00Z"
+        }
+      ],
+      "likes": 350
+    },
+    {
+      "id": "4",
+      "userId": 7,
+      "title": "Tips for Achieving Financial Freedoms",
+      "author": "David dance",
+      "datePublished": "2025-02-22T12:00:00Z",
+      "category": "dancing",
+      "content": "Achieving financial freedom is a goal many people strive for, yet it often feels out of reach. With mounting debt, rising living costs, and financial uncertainty, it’s easy to feel overwhelmed when it comes to managing your finances. However, with careful planning, discipline, and the right mindset, financial freedom is achievable. In this post, I’ll share 10 practical tips that can help you take control of your finances and build a secure financial future.\n\n1. **Create a Budget**\nThe first step toward financial freedom is understanding where your money is going. A detailed budget will allow you to track your income, expenses, and savings goals. Start by listing all your sources of income and then allocate specific amounts for each expense, including savings. By tracking your spending habits, you’ll be able to identify areas where you can cut back and save more.\n\n2. **Build an Emergency Fund**\nLife is unpredictable, and having an emergency fund is crucial for financial stability. Aim to save at least three to six months' worth of living expenses in a high-yield savings account. This fund will give you peace of mind in case of unexpected expenses such as medical bills or car repairs, preventing you from going into debt during difficult times.\n\n3. **Pay Off Debt**\nHigh-interest debt, such as credit card balances, can be a significant barrier to achieving financial freedom. Focus on paying off your debts as quickly as possible. Start by paying off the highest-interest debt first, then move on to others. Consider using strategies like the debt avalanche or debt snowball methods to stay motivated and make consistent progress.\n\n4. **Invest Early and Consistently**\nThe earlier you start investing, the more time your money has to grow. ",
+      "tags": [
+        "Finance",
+        "Money Management",
+        "Personal Finance",
+        "Financial Freedom",
+        "Investing"
+      ],
+      "comments": [
+        {
+          "username": "moneywise_mike",
+          "comment": "Great tips! I’ve been working on my budget, and it’s already making a big difference in my finances.",
+          "date": "2025-02-22T13:00:00Z"
+        },
+        {
+          "username": "debtfree_diana",
+          "comment": "I love the idea of creating multiple streams of income. I’m starting a side hustle next month!",
+          "date": "2025-02-22T14:15:00Z"
+        },
+        {
+          "username": "investor_joe",
+          "comment": "I’ve been investing for a few years now, but this post really helped me rethink my strategy. Thanks for the advice!",
+          "date": "2025-02-22T15:00:00Z"
+        }
+      ],
+      "likes": 150
+    },
+    {
+      "id": "5",
+      "userId": 8,
+      "title": "The Ultimate Guide to Sustainable Living",
+      "author": "Lisa White",
+      "datePublished": "2025-02-22T17:30:00Z",
+      "category": "Lifestyles",
+      "content": "In recent years, sustainability has become an increasingly important topic as people around the world recognize the environmental impact of our daily choices. From reducing waste to conserving energy, living sustainably doesn’t just benefit the planet – it can also improve your overall quality of life. In this ultimate guide, we’ll explore practical steps you can take to live a more sustainable life, whether you’re just starting your journey or looking to enhance your current practices.\n\n### 1. **Reduce, Reuse, Recycle**\nThe three Rs are the foundation of sustainable living. Reducing waste is one of the most impactful ways you can contribute to a healthier planet. Start by evaluating your consumption habits. Opt for items with minimal packaging, and try to purchase products made from sustainable materials like glass, bamboo, or recycled content.\n\nReusing is another great way to reduce waste. Instead of throwing away items after a single use, try to find ways to repurpose them. For example, you can use glass jars for storage or old clothing for DIY projects. Recycling is the final step, but it should always come after reducing and reusing. Be sure to separate recyclables from your trash and make sure they are cleaned before recycling.\n\n### 2. **Opt for Eco-friendly Products**\nOne of the simplest ways to live more sustainably is by choosing eco-friendly products. This includes items like biodegradable cleaning products, reusable shopping bags, and sustainable clothing made from organic fabrics. Look for certifications like Fair Trade, B Corp, or Energy Star when shopping for items, as these labels indicate that the product meets environmental and social standards.\n\n### 3. **Save Energy**\nConserving energy is another key aspect of sustainable living. Start by being mindful of your energy usage at home. Turn off lights when they’re not in use, unplug electronics, and use energy-efficient appliances. Consider investing in LED lightbulbs, smart thermostats, and solar panels to reduce your carbon footprint.\n\n### 4. **Adopt a Plant-based Diet**\nThe food we eat has a significant impact on the environment. One of the most effective ways to reduce your environmental footprint is by adopting a plant-based diet. Reducing your meat and dairy consumption can help lower greenhouse gas emissions, conserve water, and reduce deforestation caused by livestock farming.\n\n### 5. **Sustainable Transportation**\nTransportation is a major contributor to carbon emissions, so finding alternative modes of transportation is essential. Consider walking, biking, or using public transportation instead of driving. If you must drive, opt for a fuel-efficient or electric vehicle to reduce your carbon emissions.\n\n### 6. **Support Local and Sustainable Businesses**\nSupport businesses that prioritize sustainability by buying local products and shopping from companies that have a commitment to ethical practices. Choose brands that use sustainable materials and minimize waste in their production process.\n\n### 7. **Practice Water Conservation**\nWater conservation is another important aspect of sustainable living. Fix any leaky faucets or pipes, take shorter showers, and consider installing water-saving devices like low-flow showerheads and toilets.\n\n### Conclusion**\nLiving sustainably doesn’t have to be difficult or overwhelming. By making small changes in your daily habits, you can have a positive impact on the environment. Whether it’s reducing waste, conserving energy, or supporting sustainable businesses, every step counts toward a greener future. Start by adopting one or two of these practices, and gradually incorporate more as you go. Sustainability is a journey, and each action you take brings you closer to a healthier planet.",
+      "tags": [
+        "Sustainability",
+        "Eco-friendly",
+        "Green Living",
+        "Environment",
+        "Lifestyle",
+        "Conservation"
+      ],
+      "comments": [
+        {
+          "username": "ecoliving_123",
+          "comment": "I love these tips! I’ve already started using reusable shopping bags and opting for more sustainable products.",
+          "date": "2025-02-22T18:00:00Z"
+        },
+        {
+          "username": "greenheart",
+          "comment": "This is exactly the kind of content I needed! I’m excited to start making more sustainable choices.",
+          "date": "2025-02-22T19:30:00Z"
+        },
+        {
+          "username": "earthlover",
+          "comment": "Small changes really do make a difference. I’ve been working on reducing my waste and it's been so rewarding!",
+          "date": "2025-02-22T20:00:00Z"
+        }
+      ],
+      "likes": 310
+    },
+    {
+      "id": "61",
+      "userId": 1,
+      "title": "blog",
+      "author": "bloglist",
+      "datePublished": "2025-03-01T15:04:22.986Z",
+      "category": "bloglist",
+      "content": "bloglist",
+      "tags": [
+        "bloglist"
+      ],
+      "comments": [],
+      "likes": 1111
+    }
+  ]
+}

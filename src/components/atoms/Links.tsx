@@ -1,12 +1,10 @@
-import { Link } from "react-router"
-type TextProps = {
-    title: string
-    className?:string
-    to:string
-}
+import { NavLink } from "react-router"
+import {TextProps} from '../../types/types'
 
-export default function Links({title,to}:TextProps) {
+export default function Links({ title, to }: TextProps) {
     return (
-        <Link to={to}>{title}</Link>
+        <NavLink to={to} className={({ isActive }) => {
+            return isActive ? 'underline underline-offset-8 text-blue-500' : ''
+        }}>{title}</NavLink>
     )
 }
