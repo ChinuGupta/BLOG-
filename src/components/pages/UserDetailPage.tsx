@@ -3,12 +3,16 @@ import { useEffect, useState } from "react";
 import { User } from "../../types/types";
 import { USERLISTPAGE } from "../../constants/Urls";
 import { deleteUserService, getUserById } from "../../services/authservice";
+import { useAuth } from "../../context/AuthContext";
 
 export default function UserDetailPage() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
+  const { logout } = useAuth()
+  const allow = user?.id === localStorage.getItem("id");
+
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -29,7 +33,12 @@ export default function UserDetailPage() {
     try {
       await deleteUserService(id)
       alert("User deleted successfully.");
-      navigate(USERLISTPAGE);
+      if (id === localStorage.getItem("id")) {
+        logout();
+      }
+      else {
+        navigate("/UserListPage")
+      }
     } catch (error) {
       console.error("Error deleting user:", error);
     }
@@ -43,16 +52,28 @@ export default function UserDetailPage() {
       <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">User Detail</h1>
 
       <div key={user.id} className="border bg-white p-6 rounded-lg shadow-md">
-        <div className="p-2 flex justify-end gap-4">
-          <button className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg cursor-pointer" onClick={handleDelete}>
-            🗑️ Delete
-          </button>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg cursor-pointer"
-            onClick={() => navigate(`/editUser/${user.id}`)}
-          >
-            🖊️ Edit
-          </button>
-        </div>
+        {
+          allow &&
+          <div className="p-2 flex justify-end gap-4">
+            <button className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg cursor-pointer" onClick={handleDelete}>
+              🗑️ Delete
+            </button>
+            <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg cursor-pointer"
+              onClick={() => navigate(`/editUser/${user.id}`)}
+            >
+              🖊️ Edit
+            </button>
+
+            {/* <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg cursor-pointer"
+            
+              onClick={() => navigate(`/setPassword`)}
+            >
+              🔑 SetPassword
+            </button> */}
+
+          </div>
+        }
+
 
         <div className="flex items-center space-x-4">
           <img src={user.profilePicture} alt={user.username} className="w-16 h-16 rounded-full border" />

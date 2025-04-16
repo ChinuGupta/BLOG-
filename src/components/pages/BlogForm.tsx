@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { blogs } from "../../types/types";
 import { addBlogService } from "../../services/authservice";
-
-export default function BlogForm({ fetchbloglist, closeForm, bloglist }: { fetchbloglist: () => void, closeForm: () => void, bloglist: blogs[] }) {
+import short from 'short-uuid'
+import InputField from "../InputFieldComponent";
+export default function BlogForm({ fetchbloglist, closeForm }: { fetchbloglist: () => void, closeForm: () => void }) {
 
     const [blogData, setBlogData] = useState<blogs>({
-        id: bloglist.length > 0 ? bloglist[bloglist.length - 1].id + 1 : 1,
-        userId: 1,
+        id: short.generate(),
+        userId: localStorage.getItem("id") || "",
         title: "",
-        author: "",
+        author:localStorage.getItem("email")?.split("@")[0] || "",
         datePublished: new Date().toISOString(),
         category: "",
         content: "",
@@ -17,13 +18,8 @@ export default function BlogForm({ fetchbloglist, closeForm, bloglist }: { fetch
         likes: 1111,
     });
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e:  React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setBlogData({ ...blogData, [e.target.name]: e.target.value });
-    };
-
-
-    const handleTagsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setBlogData({ ...blogData, tags: e.target.value.split(",").map(tag => tag.trim()) });
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -41,6 +37,7 @@ export default function BlogForm({ fetchbloglist, closeForm, bloglist }: { fetch
             console.error("Error adding blog:", error);
             alert("Failed to add blog. Please try again.");
         }
+        
         fetchbloglist()
         closeForm();
 
@@ -51,25 +48,33 @@ export default function BlogForm({ fetchbloglist, closeForm, bloglist }: { fetch
             <div className="bg-white p-6 rounded-lg shadow-lg w-96">
                 <h2 className="text-2xl font-bold mb-4">Add New Blog</h2>
                 <form onSubmit={handleSubmit}>
-                    <input
+
+                    <InputField
+                        label=""
                         type="text"
                         name="title"
-                        placeholder="Title *"
+                        placeholder="Title"
                         value={blogData.title}
                         onChange={handleChange}
                         className="w-full p-2 border rounded mb-2"
                         required
+
+
                     />
-                    <input
+
+                    <InputField
+                        label=""
                         type="text"
                         name="author"
-                        placeholder="Author *"
+                        placeholder="Author"
                         value={blogData.author}
                         onChange={handleChange}
                         className="w-full p-2 border rounded mb-2"
                         required
                     />
-                    <input
+
+                    <InputField
+                        label=""
                         type="text"
                         name="category"
                         placeholder="Category"
@@ -77,21 +82,18 @@ export default function BlogForm({ fetchbloglist, closeForm, bloglist }: { fetch
                         onChange={handleChange}
                         className="w-full p-2 border rounded mb-2"
                     />
-                    <textarea
+
+                    <InputField
+                        label=""
+                        type="textarea"
                         name="content"
-                        placeholder="Blog Content *"
+                        placeholder="Blog Content"
                         value={blogData.content}
                         onChange={handleChange}
                         className="w-full p-2 border rounded mb-2"
                         required
                     />
-                    <input
-                        type="text"
-                        name="tags"
-                        placeholder="Tags (comma separated)"
-                        onChange={handleTagsChange}
-                        className="w-full p-2 border rounded mb-2"
-                    />
+            
                     <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md">
                         Submit
                     </button>

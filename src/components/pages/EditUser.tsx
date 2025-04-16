@@ -32,8 +32,6 @@ export default function EditUser() {
 
     useEffect(() => {
         const fetchUser= async () => {
-            // console.log("Fetching user with ID:", id);
-
             try {
                 const res = await getUserById(id);
                 if (res?.data) {

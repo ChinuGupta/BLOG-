@@ -1,19 +1,20 @@
-import { Route, Routes } from 'react-router'
 // import LoginPage from '../components/pages/LoginPage'
 // import RegisterPage from '../components/pages/RegisterPage'
 // import About from '../components/pages/About'
-import ProtecterRoute from '../components/ProtecterRoute'
 // import UserListPage from '../components/pages/UserListPage'
 // import UserDetailPage from '../components/pages/UserDetailPage'
 // import BlogPage from '../components/pages/BlogPage'
 // import BlogDetailPage from '../components/pages/BlogDetailPage'
 // import EditBlog from '../components/pages/EditBlog'
 // import EditUser from '../components/pages/EditUser'
+// // import LoginClassPage from '../components/pages/LoginClassPage'
+import { Route, Routes } from 'react-router'
 import { ABOUTURL, BLOGDETAILPAGE, BLOGLISTPAGE, EDITBLOG, EDITUSER, LOGINURL, REGISTERURL, USERDETAILPAGE, USERLISTPAGE } from '../constants/Urls'
-
+import ProtecterRoute from '../components/ProtecterRoute'
 import { lazy, Suspense } from "react";
-import Loading from '../components/Loading';
-
+import NotFound from '../components/pages/NotFound';
+// import SetPassword from '../components/pages/Setpassword';
+// import Forgetpassword from '../components/pages/Forgetpassword';
 const LoginPage = lazy(() => import("../components/pages/LoginPage"));
 const RegisterPage = lazy(() => import("../components/pages/RegisterPage"));
 const About = lazy(() => import("../components/pages/About"));
@@ -26,63 +27,88 @@ const EditUser = lazy(() => import("../components/pages/EditUser"));
 
 export default function Routers() {
     return (
-        <Suspense fallback={<div><Loading/></div>}>
-        <Routes>
-            <Route path={LOGINURL} element={<LoginPage />} />
-            <Route path={REGISTERURL} element={<RegisterPage />} />
-            <Route path={ABOUTURL} element={<About />} />
-            <Route
-                path={USERLISTPAGE}
-                element={
-                    <ProtecterRoute>
-                        <UserListPage />
-                    </ProtecterRoute>
-                }
-            />
+        <Suspense fallback={""}>
+            <Routes>
+                <Route path={LOGINURL} element={<LoginPage />} />
+                <Route path={REGISTERURL} element={<RegisterPage />} />
+                <Route path={ABOUTURL} element={<About />} />
+                <Route
+                    path={USERLISTPAGE}
+                    element={
+                        <ProtecterRoute>
+                            <UserListPage />
+                        </ProtecterRoute>
+                    }
+                />
 
-            <Route
-                path={USERDETAILPAGE}
-                element={
-                    <ProtecterRoute>
-                        <UserDetailPage />
-                    </ProtecterRoute>
-                }
-            />
+                {/* <Route
+                    path={"SetPassword"}
+                    element={
+                            <SetPassword />
+                    }
+                />
 
-            <Route
-                path={BLOGLISTPAGE}
-                element={
-                    <ProtecterRoute>
-                        <BlogPage />
-                    </ProtecterRoute>
-                }
-            />
+                <Route
+                    path={"ForgetPassword"}
+                    element={
+                            <Forgetpassword />
+                    }
+                /> */}
 
-            <Route
-                path={BLOGDETAILPAGE}
-                element={
-                    <ProtecterRoute>
-                        <BlogDetailPage />
-                    </ProtecterRoute>
-                }
-            />
-            <Route
-                path={EDITBLOG}
-                element={
-                    <ProtecterRoute>
-                        <EditBlog />
-                    </ProtecterRoute>
-                }
-            />
-            <Route
-                path={EDITUSER}
-                element={
-                    <ProtecterRoute>
-                        <EditUser />
-                    </ProtecterRoute>
-                }
-            />
-        </Routes>
-    </Suspense >
-)
+                <Route
+                    path={USERDETAILPAGE}
+                    element={
+                        <ProtecterRoute>
+                            <UserDetailPage />
+                        </ProtecterRoute>
+                    }
+                />
+
+                <Route
+                    path={BLOGDETAILPAGE}
+                    element={
+                        <ProtecterRoute>
+                            <BlogDetailPage />
+                        </ProtecterRoute>
+                    }
+                />
+
+                <Route
+                    path={BLOGLISTPAGE}
+                    element={
+                        <ProtecterRoute>
+                            <BlogPage />
+                        </ProtecterRoute>
+                    }
+                />
+                <Route
+                    path={EDITBLOG}
+                    element={
+                        <ProtecterRoute>
+                            <EditBlog />
+                        </ProtecterRoute>
+                    }
+                />
+                <Route
+                    path={EDITUSER}
+                    element={
+                        <ProtecterRoute>
+                            <EditUser />
+                        </ProtecterRoute>
+                    }
+                />
+                <Route
+                    path="*"
+                    element={
+                        <NotFound />
+                    }
+                />
+
+            </Routes>
+
+
+
+        </Suspense >
+
+    )
 }

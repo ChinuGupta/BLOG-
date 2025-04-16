@@ -1,9 +1,10 @@
-export type AuthContextType = {
 
+export type AuthContextType = {
+    user: User | null;
     isLoggedIn: boolean;
     login: (id: number, email: string) => void;
     logout: () => void;
-
+    googleLogin: () => void;
 };
 
 
@@ -11,7 +12,7 @@ export type AuthContextType = {
 export type User = {
     id: string;
     email: string;
-    password: string;
+    password: string | null;
     firstName: string;
     lastName: string;
     username: string;
@@ -33,8 +34,8 @@ export type User = {
 
 // Blog Type
 export type blogs = {
-    id: number;
-    userId: number;
+    id: string;
+    userId: string;
     title: string;
     author: string;
     datePublished: string;
@@ -52,7 +53,7 @@ export type blogs = {
 //Card props type
 export type CardProps = {
     blogs: blogs;
-};
+}
 
 //headerbutton props
 
@@ -66,11 +67,18 @@ export type TextProps = {
 //imputfieldcomponent type
 export interface InputFieldProps {
     label: string;
-    name:string;
+    name: string;
     type: string;
     value: string;
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
     placeholder?: string;
     required?: boolean;
+    className: string;
 }
 
+//Button props
+export type Buttonprops = {
+    text: string,
+    className?: string,
+    onClick?: () => void
+}

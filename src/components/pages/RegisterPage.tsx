@@ -3,6 +3,8 @@ import InputField from "../InputFieldComponent";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { registerUser } from "../../services/authservice";
+import { passwordValidation } from "../../middleware/passwordvalidation"
+import { checkUserExists } from "../../middleware/Userexist";
 
 const RegisterPage = () => {
   const [email, setEmail] = useState<string>("");
@@ -11,7 +13,7 @@ const RegisterPage = () => {
 
   const { login } = useAuth();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     if (name === "email") setEmail(value)
     if (name === "password") setPassword(value)
@@ -19,6 +21,12 @@ const RegisterPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    const existingUser = await checkUserExists(email);
+    if (existingUser) {
+      alert("Email is already registered use different email");
+      return;
+    }
 
     const newUser = {
       id: crypto.randomUUID(),
@@ -37,33 +45,16 @@ const RegisterPage = () => {
         instagram: "",
       },
       totalPosts: 0,
+      isGoogleUser:false,
       followers: 0,
       following: 0,
       subscriptionPlan: "Free",
       lastLogin: new Date().toISOString(),
     };
 
-    const passwordValidation = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
 
-    if (!passwordValidation.test(password)) {
-      if (password.length < 8) {
-        setMessage("Password must be at least 8 characters long.");
-      } else if (!/[A-Z]/.test(password)) {
-
-        setMessage("Password must contain at least one uppercase letter.");
-      } else if (!/[a-z]/.test(password)) {
-
-        setMessage("Password must contain at least one lowercase letter.");
-      } else if (!/\d/.test(password)) {
-
-        setMessage("Password must contain at least one number.");
-      }
-
-      return;
-    }
+    passwordValidation(password);
     setMessage("");
-
-
 
     try {
       const response = await registerUser(newUser)
@@ -86,10 +77,13 @@ const RegisterPage = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <form
-        className="bg-white p-10 rounded w-90 h-90"
+        className="bg-white rounded  p-7 w-[20rem]  h-70"
         onSubmit={handleSubmit}
       >
-        <h1 className="flex items-center justify-center">Register</h1>
+        <div className="flex items-center justify-center">
+          <h1 className="text-2xl font-bold">Register</h1>
+
+        </div>
         <InputField
           label="Email"
           name="email"
@@ -97,6 +91,7 @@ const RegisterPage = () => {
           value={email}
           onChange={handleChange}
           placeholder="Enter Email"
+          className="w-full p-2 border rounded"
           required={true}
         />
         <InputField
@@ -106,9 +101,11 @@ const RegisterPage = () => {
           value={password}
           onChange={handleChange}
           placeholder="Password"
+          className="w-full p-2 border rounded"
           required={true}
 
         />
+
         <p className="text-red-600">{message}</p>
 
         <button type="submit" className="w-full p-2 bg-[#1447E6] text-white rounded cursor-pointer">

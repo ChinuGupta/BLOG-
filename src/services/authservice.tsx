@@ -3,7 +3,7 @@ import { API_ENDPOINTS } from "../constants/authConstants";
 import { blogs, User } from "../types/types";
 
 
-export const getUsers = async (credentials?: { email: string; password: string }) => {
+export const getUsers = async (credentials?: { email: string}) => {
     if (credentials) {
         return axios.get(API_ENDPOINTS.USERS, { params: credentials });
     }
@@ -21,3 +21,7 @@ export const getBlogsById = async (id: string | undefined) => axios.get(`${API_E
 export const addBlogService = async (newBlog: blogs) => axios.post(API_ENDPOINTS.BLOGS, newBlog);
 export const deleteBlogService = async (id: number) => axios.delete(`${API_ENDPOINTS.BLOGS}/${id}`);
 export const editBlogServices = async (id: string, blogData: blogs) => axios.put(`${API_ENDPOINTS.BLOGS}/${id}`, blogData);
+
+export const setPasswordService = async (id: string, password: string) => {
+    return axios.patch(`${API_ENDPOINTS.USERS}/${id}`, { password });
+};

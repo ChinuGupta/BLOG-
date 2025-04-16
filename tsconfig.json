@@ -1,7 +1,20 @@
+// {
+//   "files": [],
+//   "references": [
+//     { "path": "./tsconfig.app.json" },
+//     { "path": "./tsconfig.node.json" }
+//   ]
+// }
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "types": ["jest", "vitest", "node", "cypress"], 
+    "module": "es2022"
+  },
+  "include": ["src", "tests", "**/*.test.ts", "**/*.test.tsx", "setupTests.ts", "cypress"],
+  "exclude": ["node_modules", "dist"]
 }

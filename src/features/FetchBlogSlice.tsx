@@ -1,6 +1,7 @@
-import {createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { blogs } from "../types/types";
 import { fetchBlogs } from "../Actions/actions";
+
 type Blogstate = {
     isloading: boolean
     blog: blogs[]
@@ -19,26 +20,23 @@ export const fetchingslice = createSlice({
     initialState,
     reducers: {
     },
-   
+
     extraReducers: (builder) => {
 
-        
-        builder.addCase(fetchBlogs.pending, (state,action) => {
+        builder.addCase(fetchBlogs.pending, (state, action) => {
             state.isloading = true;
-            console.log("actions:",action);
-            
+            console.log("actions:", action);
         })
 
         builder.addCase(fetchBlogs.fulfilled, (state, action) => {
             state.isloading = false;
             state.blog = action.payload;
-            console.log("fulfill the request",state.blog);
-            
+            console.log("fulfill the request", state.blog);
         })
 
         builder.addCase(fetchBlogs.rejected, (state, action) => {
             console.log(action.error);
-            state.isloading=false;
+            state.isloading = false;
             state.iserror = action.error.message || "Something went wrong";
         })
     }

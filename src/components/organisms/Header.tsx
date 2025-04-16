@@ -1,4 +1,4 @@
-import Headerbuttonmolecules from "../molecules/Headerbuttonmolecules";
+// import Headerbuttonmolecules from "../molecules/Headerbuttonmolecules";
 import Headermolecules from "../molecules/Headermolecules";
 import Logomolecule from "../molecules/Logomolecule";
 
@@ -12,9 +12,9 @@ export default function Header() {
         <Headermolecules />
       </nav>
      
-      <div className="flex gap-4">
+      {/* <div className="flex gap-4">
         <Headerbuttonmolecules />
-      </div>
+      </div> */}
     </header>
   );
 }

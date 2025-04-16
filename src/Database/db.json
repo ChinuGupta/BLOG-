@@ -17,6 +17,7 @@
         "instagram": "https://instagram.com/janedoe"
       },
       "totalPosts": 15,
+      "isGoogleUser": false,
       "followers": 1200,
       "following": 250,
       "subscriptionPlan": "Basics",
@@ -39,32 +40,11 @@
         "instagram": "https://instagram.com/jatindoe"
       },
       "totalPosts": 5,
+      "isGoogleUser": false,
       "followers": 500,
       "following": 120,
       "subscriptionPlan": "Standard",
       "lastLogin": "2025-02-22T16:47:00Z"
-    },
-    {
-      "id": "4",
-      "email": "alice.smith@example.com",
-      "password": "Chinu123",
-      "firstName": "Alice",
-      "lastName": "Smith",
-      "username": "alicesmith",
-      "age": 32,
-      "gender": "Female",
-      "bio": "Food and lifestyle blogger. Sharing recipes, cooking tips, and my adventures in the kitchen.",
-      "profilePicture": "https://i.pravatar.cc/1000/u=433840",
-      "socialLinks": {
-        "twitter": "https://twitter.com/alicesmith",
-        "facebook": "https://facebook.com/alicesmith",
-        "instagram": "https://instagram.com/alicesmith"
-      },
-      "totalPosts": 50,
-      "followers": 2200,
-      "following": 400,
-      "subscriptionPlan": "Premium",
-      "lastLogin": "2025-02-19T12:10:00Z"
     },
     {
       "id": "5",
@@ -83,6 +63,7 @@
         "instagram": "https://instagram.com/bobjones"
       },
       "totalPosts": 150,
+      "isGoogleUser": false,
       "followers": 5000,
       "following": 300,
       "subscriptionPlan": "Basic",
@@ -105,6 +86,7 @@
         "instagram": "https://instagram.com/emilybrown"
       },
       "totalPosts": 30,
+      "isGoogleUser": false,
       "followers": 1800,
       "following": 250,
       "subscriptionPlan": "Standard",
@@ -127,6 +109,7 @@
         "instagram": "https://instagram.com/davidgreen"
       },
       "totalPosts": 80,
+      "isGoogleUser": false,
       "followers": 3000,
       "following": 450,
       "subscriptionPlan": "Premium",
@@ -149,54 +132,11 @@
         "instagram": "https://instagram.com/lisawhite"
       },
       "totalPosts": 60,
+      "isGoogleUser": false,
       "followers": 2500,
       "following": 320,
       "subscriptionPlan": "Basic",
       "lastLogin": "2025-02-23T11:00:00Z"
-    },
-    {
-      "id": "8e559aca-c527-4996-bfcb-d5362b71dbba",
-      "email": "Chinu123@gmail.com",
-      "password": "Chinu123",
-      "firstName": "Chinu123",
-      "lastName": "",
-      "username": "Chinu123",
-      "age": 18,
-      "gender": "Not specified",
-      "bio": "Hello! I'm new here.",
-      "profilePicture": "https://via.placeholder.com/150",
-      "socialLinks": {
-        "twitter": "",
-        "facebook": "",
-        "instagram": ""
-      },
-      "totalPosts": 0,
-      "followers": 0,
-      "following": 0,
-      "subscriptionPlan": "Free",
-      "lastLogin": "2025-03-01T09:31:47.064Z"
-    },
-    {
-      "id": "cf39c00b-19c5-4a11-83fc-9d31b480ef2f",
-      "email": "Chinu@gmail.com",
-      "password": "Chinu123",
-      "firstName": "Chinu",
-      "lastName": "Gupta",
-      "username": "Chinu",
-      "age": "21",
-      "gender": "Not specified",
-      "bio": "Hello! I'm new here.",
-      "profilePicture": "https://via.placeholder.com/150",
-      "socialLinks": {
-        "twitter": "",
-        "facebook": "",
-        "instagram": ""
-      },
-      "totalPosts": 0,
-      "followers": 0,
-      "following": 0,
-      "subscriptionPlan": "Free",
-      "lastLogin": "2025-03-01T12:36:15.113Z"
     },
     {
       "id": "3a32dc5f-dabf-45ea-825a-a82bf5cff430",
@@ -215,18 +155,19 @@
         "instagram": ""
       },
       "totalPosts": 0,
+      "isGoogleUser": false,
       "followers": 0,
       "following": 0,
       "subscriptionPlan": "Free",
       "lastLogin": "2025-03-01T18:34:33.808Z"
     },
     {
-      "id": "5fdc658a-f31b-4d89-9feb-bbaec9e41031",
-      "email": "Chinu123@gmail.com",
-      "password": "Chinu123",
-      "firstName": "Chinu123",
+      "id": "be4b7795-a317-4a0a-8b82-c4188a585e96",
+      "email": "test@test.com",
+      "password": "Test123456",
+      "firstName": "test",
       "lastName": "",
-      "username": "Chinu123",
+      "username": "test",
       "age": 18,
       "gender": "Not specified",
       "bio": "Hello! I'm new here.",
@@ -237,16 +178,84 @@
         "instagram": ""
       },
       "totalPosts": 0,
+      "isGoogleUser": false,
       "followers": 0,
       "following": 0,
       "subscriptionPlan": "Free",
-      "lastLogin": "2025-03-03T10:11:51.255Z"
+      "lastLogin": "2025-03-06T12:32:41.358Z"
+    },
+    {
+      "id": "ff14c38e-caf2-4334-a817-8ef24fce0d84",
+      "email": "chinu@gmail.com",
+      "password": "Chinu123",
+      "firstName": "chinu",
+      "lastName": "",
+      "username": "chinu",
+      "age": 18,
+      "gender": "Not specified",
+      "bio": "Hello! I'm new here.",
+      "profilePicture": "https://via.placeholder.com/150",
+      "socialLinks": {
+        "twitter": "",
+        "facebook": "",
+        "instagram": ""
+      },
+      "totalPosts": 0,
+      "isGoogleUser": false,
+      "followers": 0,
+      "following": 0,
+      "subscriptionPlan": "Free",
+      "lastLogin": "2025-03-10T09:08:48.200Z"
+    },
+    {
+      "id": "9sqzVeVQDHPYUy2twSJQajq0Esl2",
+      "email": "cg354055@gmail.com",
+      "firstName": "Chinu",
+      "lastName": "Gupta",
+      "username": "cg354055",
+      "age": 18,
+      "gender": "Not specified",
+      "bio": "Hello! I'm new here.",
+      "profilePicture": "https://via.placeholder.com/150",
+      "socialLinks": {
+        "twitter": "",
+        "facebook": "",
+        "instagram": ""
+      },
+      "totalPosts": 0,
+      "isGoogleUser": true,
+      "followers": 0,
+      "following": 0,
+      "subscriptionPlan": "Free",
+      "lastLogin": "2025-03-21T10:32:49.458Z"
+    },
+    {
+      "id": "uFM53J7mW0Q9H10NpsovxSX6QlX2",
+      "email": "2021pceitchinu016@poornima.org",
+      "firstName": "CHINUjj",
+      "lastName": "GUPTA",
+      "username": "2021pceitchinu016",
+      "age": 18,
+      "gender": "Not specified",
+      "bio": "Hello! I'm new here.",
+      "profilePicture": "https://via.placeholder.com/150",
+      "socialLinks": {
+        "twitter": "",
+        "facebook": "",
+        "instagram": ""
+      },
+      "totalPosts": 0,
+      "isGoogleUser": true,
+      "followers": 0,
+      "following": 0,
+      "subscriptionPlan": "Free",
+      "lastLogin": "2025-03-21T10:40:13.559Z"
     }
   ],
   "blogs": [
     {
       "id": "1",
-      "userId": 1,
+      "userId": "1",
       "title": "The Future of Artificial Intelligence",
       "author": "John Doe",
       "datePublished": "2025-02-20T10:30:00Z",
@@ -281,7 +290,7 @@
     },
     {
       "id": "4",
-      "userId": 7,
+      "userId": "7",
       "title": "Tips for Achieving Financial Freedoms",
       "author": "David dance",
       "datePublished": "2025-02-22T12:00:00Z",
@@ -315,7 +324,7 @@
     },
     {
       "id": "5",
-      "userId": 8,
+      "userId": "8",
       "title": "The Ultimate Guide to Sustainable Living",
       "author": "Lisa White",
       "datePublished": "2025-02-22T17:30:00Z",
@@ -349,16 +358,134 @@
       "likes": 310
     },
     {
-      "id": "61",
-      "userId": 1,
-      "title": "blog",
-      "author": "bloglist",
-      "datePublished": "2025-03-01T15:04:22.986Z",
-      "category": "bloglist",
-      "content": "bloglist",
-      "tags": [
-        "bloglist"
-      ],
+      "id": "2s2zjYwjPp6ZHsWc1yQnJF",
+      "userId": "9sqzVeVQDHPYUy2twSJQajq0Esl2",
+      "title": "Hi",
+      "author": "cg354055",
+      "datePublished": "2025-03-24T09:17:39.780Z",
+      "category": "dancing",
+      "content": "This is dancing content",
+      "tags": [],
+      "comments": [],
+      "likes": 1111
+    },
+    {
+      "id": "qP78ikabKESBJ3BQDD19Jd",
+      "userId": "9sqzVeVQDHPYUy2twSJQajq0Esl2",
+      "title": "This is a new blog",
+      "author": "cg354055",
+      "datePublished": "2025-03-26T09:11:40.093Z",
+      "category": "Lifestyles",
+      "content": "Embracing a Balanced Lifestyle: The Key to Happiness and Success",
+      "tags": [],
+      "comments": [],
+      "likes": 1111
+    },
+    {
+      "id": "81up1jnDU8yHYNsiiuMDYy",
+      "userId": "9sqzVeVQDHPYUy2twSJQajq0Esl2",
+      "title": "new blog",
+      "author": "cg354055",
+      "datePublished": "2025-03-28T05:21:58.533Z",
+      "category": "Lifestyles",
+      "content": "lifestyle",
+      "tags": [],
+      "comments": [],
+      "likes": 1111
+    },
+    {
+      "id": "j6UdPYgasB8EdKfuCRsfdd",
+      "userId": "9sqzVeVQDHPYUy2twSJQajq0Esl2",
+      "title": "test this blog",
+      "author": "cg354055",
+      "datePublished": "2025-03-28T05:22:19.968Z",
+      "category": "nature",
+      "content": " Nature is awesom",
+      "tags": [],
+      "comments": [],
+      "likes": 1111
+    },
+    {
+      "id": "5Edn1ZrANoWHAFftRXS3ZP",
+      "userId": "9sqzVeVQDHPYUy2twSJQajq0Esl2",
+      "title": "adding new one",
+      "author": "cg354055",
+      "datePublished": "2025-03-28T05:27:20.289Z",
+      "category": "normalcategory",
+      "content": "the new blog content\n\n",
+      "tags": [],
+      "comments": [],
+      "likes": 1111
+    },
+    {
+      "id": "fHck2pXoizzwNNQ2fWVUhd",
+      "userId": "9sqzVeVQDHPYUy2twSJQajq0Esl2",
+      "title": "New Blog",
+      "author": "cg354055",
+      "datePublished": "2025-03-28T05:27:49.956Z",
+      "category": "bloglist test",
+      "content": "content\n",
+      "tags": [],
+      "comments": [],
+      "likes": 1111
+    },
+    {
+      "id": "9td1nkzJqoYx8qJFnpvia7",
+      "userId": "9sqzVeVQDHPYUy2twSJQajq0Esl2",
+      "title": "title",
+      "author": "cg354055",
+      "datePublished": "2025-03-28T05:28:30.015Z",
+      "category": "the new category",
+      "content": "the blog content\n",
+      "tags": [],
+      "comments": [],
+      "likes": 1111
+    },
+    {
+      "id": "3heJKLUbA8S1qBmB7CGunc",
+      "userId": "9sqzVeVQDHPYUy2twSJQajq0Esl2",
+      "title": "new",
+      "author": "cg354055",
+      "datePublished": "2025-03-28T05:28:53.337Z",
+      "category": "dancing",
+      "content": "normal thing",
+      "tags": [],
+      "comments": [],
+      "likes": 1111
+    },
+    {
+      "id": "nz3f11wzwYN3QP5B6oQniS",
+      "userId": "9sqzVeVQDHPYUy2twSJQajq0Esl2",
+      "title": "neaw ",
+      "author": "cg354055",
+      "datePublished": "2025-03-28T05:29:13.324Z",
+      "category": "any category",
+      "content": "blog content\n",
+      "tags": [],
+      "comments": [],
+      "likes": 1111
+    },
+    {
+      "id": "34PA3EgiDsybA7TEeAQe5V",
+      "userId": "9sqzVeVQDHPYUy2twSJQajq0Esl2",
+      "title": "anything",
+      "author": "cg354055",
+      "datePublished": "2025-03-28T05:29:38.768Z",
+      "category": "cat",
+      "content": "blog\n",
+      "tags": [],
+      "comments": [],
+      "likes": 1111
+    },
+    {
+      "id": "fHShKhbQUZf29LY2axvcd3",
+      "userId": "9sqzVeVQDHPYUy2twSJQajq0Esl2",
+      "title": "this is a title of test fuzzy",
+      "author": "cg354055",
+      "datePublished": "2025-04-16T17:32:33.878Z",
+      "category": "fuzzy",
+      "content": "this is a fuzzy search",
+      "tags": [],
       "comments": [],
       "likes": 1111
     }
